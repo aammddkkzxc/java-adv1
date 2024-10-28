@@ -36,6 +36,7 @@ public class MyPrinterV3 {
         public void run() {
             while (!Thread.interrupted()) {
                 if (jobQueue.isEmpty()) {
+                    Thread.yield();
                     continue;
                 }
 
