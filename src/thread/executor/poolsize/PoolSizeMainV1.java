@@ -12,6 +12,7 @@ public class PoolSizeMainV1 {
 
     public static void main(String[] args) {
         BlockingQueue<Runnable> workQueue = new ArrayBlockingQueue<>(2);
+//        BlockingQueue<Runnable> workQueue = new LinkedBlockingQueue<>();
         ExecutorService es = new ThreadPoolExecutor(2, 4,
                 3000, TimeUnit.MILLISECONDS, workQueue);
         printState(es);
